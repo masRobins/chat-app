@@ -10,12 +10,15 @@ const Join = () => {
     return (
         <div className="join-outer-container">
             <div className="join-inner-container">
-                <div className="heading">
-
+                <div className="site-name">
+                    Mas Chat
                 </div>
+                <h1 className="heading">
+                    Join
+                </h1>
                 <div>
                     <input 
-                        placeholder="" 
+                        placeholder="Name" 
                         className="join-input" 
                         type="text" 
                         onChange={(event) => 
@@ -25,7 +28,7 @@ const Join = () => {
                 </div>
                 <div>
                     <input 
-                        placeholder="" 
+                        placeholder="Room" 
                         className="join-input mt-20" 
                         type="text" 
                         onChange={(event) => 
@@ -33,7 +36,7 @@ const Join = () => {
                         }
                     />
                 </div>
-                <Link onClick={event => (!name || !room) ? event.preventDefault(): null} to={`/chat?name=${name}&room=${room}`}>
+                <Link onClick={event => (!name || !room) ? event.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
                     <button 
                         className="button mt-20"
                         type="submit"
